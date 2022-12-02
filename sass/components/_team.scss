@@ -1,0 +1,89 @@
+.team {
+  background-color: #f5f4fa;
+
+  &__list {
+    display: block;
+    padding-left: 0;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__images {
+    background: $white-color;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    margin-top: 30px;
+    color: $text-color;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    color: $title-color;
+    margin-top: 10px;
+  }
+
+  &__list-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px auto 30px;
+  }
+
+  &__list-paragraph {
+    margin-right: 10px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    color: $social-color;
+    border-radius: 50%;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $white-color;
+    }
+  }
+
+  &__icon {
+    --color1: currentColor;
+  }
+}

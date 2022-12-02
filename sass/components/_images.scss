@@ -1,0 +1,47 @@
+.section-images {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 0;
+
+    &__list {
+      display: flex;
+      padding-left: 0;
+    }
+  }
+}
+
+.list-images {
+  margin-right: 30px;
+  width: 370px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__text {
+    display: flex;
+    font-weight: 700;
+    line-height: 1.142;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: $white-color;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    margin-right: 30px;
+
+    position: absolute;
+    bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__block {
+    position: relative;
+  }
+}

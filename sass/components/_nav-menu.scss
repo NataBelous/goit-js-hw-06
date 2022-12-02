@@ -1,0 +1,155 @@
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 48px 40px;
+  text-align: left;
+  z-index: 1;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    font-weight: 500;
+    line-height: 1.14;
+    padding-left: 0;
+    display: block;
+    flex: 1;
+  }
+
+  &__marker {
+    margin-bottom: 32px;
+    @media screen and (max-height: 500px) {
+        margin-bottom: 10px;
+      }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__page {
+    color: $text-color;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+
+    @media screen and (max-height: 500px) {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.17;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__active {
+    color: $accent-color;
+  }
+
+  &__contact {
+    display: block;
+    align-items: left;
+
+    
+  }
+
+  &__contact-list {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact-link {
+    color: $title-color;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__contact-tel {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    color: $accent-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-height: 500px) {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+      }
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.menu-soc {
+  display: flex;
+  margin-top: 64px;
+  flex-wrap: wrap;
+
+  @media screen and (max-height: 500px) {
+      margin-top: 15px;
+    }
+
+  &__list::after {
+    content: "";
+    display: inline-block;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    width: 22px;
+    height: 0;
+    transform: rotate(90deg);
+    vertical-align: middle;
+  }
+
+  &__list:last-child::after {
+    display: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}

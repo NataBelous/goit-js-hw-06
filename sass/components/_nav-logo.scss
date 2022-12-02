@@ -1,0 +1,85 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__style {
+    &-logo {
+      text-decoration: none;
+      margin-right: 95px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      @media screen and (min-width: 768px) {
+        margin-right: 88px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        margin-right: 95px;
+        padding-top: 24px;
+        padding-bottom: 25px;
+      }
+    }
+
+    &-web {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.17;
+      color: $accent-color;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+      }
+    }
+
+    &-studio {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.17;
+      color: $black-color;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+      }
+    }
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+    position: absolute;
+    right: 10px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    .nav__icon-cross {
+      display: none;
+    }
+
+    &.is-open {
+      position: fixed;
+
+      &.is-open .nav__icon-cross {
+        display: block;
+      }
+
+      &.is-open .nav__icon-menu {
+        display: none;
+      }
+    }
+  }
+}
